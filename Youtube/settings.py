@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
     "/var/www/static/",
 ]
 
-DEBUG = True
+DEBUG = False
 
 import os
 MEDIA_URL = '/media/'
