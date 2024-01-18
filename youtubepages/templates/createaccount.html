@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube.createaccount.com</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        #container1{
+            width: 50%;
+            font-family: sans-serif;
+            margin-top: 8%;
+        }
+        .form-group{
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .form-group input{
+            padding: 11px;
+            border: none;
+        }
+        .form-control{border: none;}
+    </style>
+</head>
+
+<body>
+    <div class="container border" id="container1">
+        <div style="text-align: center;margin-top: 25px;">
+            <img src="{% static 'images\google.png' %}" alt="" height="25px" width="84px">
+            <h3 class="mt-2">Create a Google Account</h3>
+        </div>
+
+        <div class="container">
+            
+                <div class="">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                       <div class="row">
+                        <div class="col-6">
+                            <div class="form-group  border">
+                                <input type="text" class="form-control" placeholder="Name *" name="name" value="" />
+                            </div>
+                            <!-- ================= -->
+                            <div class="form-group border">
+                                <input type="email" class="form-control" placeholder="Email *" name="email" value="" />
+                            </div>
+                        
+                            <!-- ================= -->
+                            <div class="form-group border">
+                                <input type="password" class="form-control" placeholder="Password *" name="password" value="" />
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                        
+                            <!-- ================= -->
+                            <div class="form-group border">
+                                <input type="text" class="form-control" placeholder="Gender *" name="gender" value="" />
+                            </div>
+
+                            <div class="form-group border">
+                                <input type="text" class="form-control" placeholder="ChannelName *" name="ChannelName" value="" />
+                            </div>
+
+                            <div class="form-group btn btn-secondary btn-rounded ">
+                                <label class="form-label text-white m-1" for="customFile1">Choose Profile Image</label>
+                                <input type="file" class="form-control d-none" id="customFile1" name="image" />
+                            </div>
+                            
+                        </div>
+                       </div>
+
+                       <div class="my-5 " style="text-align: center;"><input type="submit" class="btnSubmit btn-primary rounded py-2 px-4 " name="createaccountsubmit" id=""></div>
+        
+
+                    </form>
+                </div>
+
+        </div>
+
+        
+    </div>
+</body>
+</html>
